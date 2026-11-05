@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ambrosial Cafe &amp; Bakery | Lekki, Lagos</title>
+<meta name="description" content="Fluffy pancakes, fresh pastries and a warm café on Admiralty Way, Lekki. Dine in, take away, or order delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Ambrosial Cafe & Bakery",
+  "telephone": "+2348167435864",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot 31A Admiralty Way, Eti-Osa",
+    "addressLocality": "Lekki",
+    "addressRegion": "Lagos",
+    "postalCode": "105102",
+    "addressCountry": "NG"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "3" }
+}
+</script>
+<style>
+:root{
+  --cream:#fff6e8; --cream-2:#f7e7cc; --cocoa:#2a1710; --cocoa-2:#4a2a1c;
+  --caramel:#d9822b; --caramel-2:#f2a74a; --berry:#c2344d; --pistachio:#8fb36a;
+  --ink:#2a1710; --muted:#7a5d4c;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s,padding .3s;padding:18px 0}
+nav.solid{background:rgba(255,246,232,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(42,23,16,.08);padding:10px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--serif);font-weight:900;font-size:1.25rem;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--caramel-2),var(--caramel) 55%,#9a5a1e);display:inline-block;box-shadow:inset 0 -3px 0 rgba(0,0,0,.15)}
+.nav-links{display:flex;gap:26px;font-weight:500;font-size:.95rem}
+.nav-links a{opacity:.8;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:1rem;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:var(--sans)}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--caramel);color:#fff;box-shadow:0 10px 24px -8px rgba(217,130,43,.8)}
+.btn-primary:hover{background:#c4731f;box-shadow:0 14px 28px -8px rgba(217,130,43,.9)}
+.btn-ghost{border-color:var(--cocoa);color:var(--cocoa);background:transparent}
+.btn-ghost:hover{background:var(--cocoa);color:var(--cream)}
+.btn-sm{padding:10px 20px;font-size:.92rem}
+@media(max-width:820px){.nav-links{display:none}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden;
+  background:radial-gradient(1100px 600px at 80% 30%,#ffe3b3 0%,transparent 60%),radial-gradient(800px 500px at 0% 100%,#f9d9b0 0%,transparent 60%),var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;position:relative;z-index:2}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:8px 16px;font-size:.85rem;font-weight:600;box-shadow:0 6px 18px -10px rgba(42,23,16,.4)}
+.eyebrow b{color:var(--caramel)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(2.6rem,6.2vw,5rem);line-height:1.02;letter-spacing:-.025em;margin:22px 0 20px}
+.hero h1 em{font-style:italic;color:var(--caramel);font-weight:700}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:30em}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.mini-trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:.92rem;font-weight:500;color:var(--cocoa-2)}
+.mini-trust span{display:flex;align-items:center;gap:8px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--pistachio);display:inline-block;box-shadow:0 0 0 4px rgba(143,179,106,.25)}
+
+.stage{position:relative;height:min(560px,70vh);perspective:1100px;display:flex;align-items:center;justify-content:center}
+.stack{position:relative;width:280px;height:280px;transform-style:preserve-3d;
+  transform:rotateX(calc(62deg + var(--my,0deg))) rotateZ(calc(var(--spin,0deg) + var(--mx,0deg)));will-change:transform}
+.layer{position:absolute;inset:0;border-radius:50%;transform-style:preserve-3d}
+.shadow{position:absolute;inset:-30px;border-radius:50%;background:radial-gradient(closest-side,rgba(42,23,16,.35),transparent);transform:translateZ(-4px)}
+.syrup{position:absolute;left:12%;top:12%;width:76%;height:76%;border-radius:46% 54% 50% 50% / 52% 46% 54% 48%;
+  background:radial-gradient(circle at 35% 30%,#e8953a,#a8501a 70%);box-shadow:0 0 0 3px rgba(120,50,10,.25)}
+.butter{position:absolute;left:41%;top:41%;width:18%;height:18%;background:linear-gradient(135deg,#fff0a8,#f6d04a);border-radius:4px;transform-style:preserve-3d}
+.butter::after{content:"";position:absolute;inset:0;background:#f0c43c;transform:translateZ(-12px)}
+.berry{position:absolute;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ff6f86,var(--berry) 60%,#7d1830)}
+.berry::after{content:"";position:absolute;left:11px;top:-5px;width:12px;height:8px;border-radius:50%;background:var(--pistachio)}
+.float{position:absolute;pointer-events:none;will-change:transform}
+.float.a{left:6%;top:18%;width:60px;height:60px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ff8aa0,var(--berry));opacity:.9}
+.float.b{right:4%;top:10%;width:34px;height:34px;border-radius:50%;background:var(--pistachio);opacity:.85}
+.float.c{right:12%;bottom:12%;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#ffd48a,var(--caramel));opacity:.8}
+.float.d{left:14%;bottom:8%;width:22px;height:22px;border-radius:6px;background:var(--cocoa);opacity:.75;transform:rotate(25deg)}
+.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-cue::after{content:"";width:1.5px;height:34px;background:linear-gradient(var(--caramel),transparent);animation:cue 1.8s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero p.lead{margin-inline:auto}.cta-row,.mini-trust{justify-content:center}
+  .stage{height:380px;order:-1}.stack{width:220px;height:220px}.hero{padding-top:90px}.scroll-cue{display:none}
+}
+
+/* ---------- MARQUEE ---------- */
+.band{background:var(--cocoa);color:var(--cream);overflow:hidden;padding:16px 0;white-space:nowrap}
+.band-track{display:inline-flex;gap:46px;animation:slide 28s linear infinite;font-family:var(--serif);font-size:1.25rem;font-style:italic}
+.band-track span::after{content:"✦";margin-left:46px;color:var(--caramel-2);font-style:normal}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- 3D JOURNEY ---------- */
+.journey{position:relative;height:520vh;background:radial-gradient(900px 600px at 50% 50%,#4a2a1c,var(--cocoa) 70%)}
+.journey-sticky{position:sticky;top:0;height:100vh;overflow:hidden;perspective:900px;perspective-origin:50% 45%}
+.world{position:absolute;inset:0;transform-style:preserve-3d}
+.ring{position:absolute;left:50%;top:50%;border-radius:50%;border:2px solid rgba(242,167,74,.35);transform-style:flat;will-change:transform,opacity}
+.panel{position:absolute;left:50%;top:50%;width:min(560px,86vw);margin-left:calc(min(560px,86vw) / -2);transform-origin:50% 50%;will-change:transform,opacity;color:var(--cream);pointer-events:none}
+.panel.active{pointer-events:auto}
+.panel .card{background:linear-gradient(160deg,rgba(255,246,232,.12),rgba(255,246,232,.04));border:1px solid rgba(255,246,232,.2);border-radius:28px;padding:38px 34px;backdrop-filter:blur(6px);box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.panel .num{font-family:var(--serif);font-size:.95rem;color:var(--caramel-2);letter-spacing:.2em;text-transform:uppercase}
+.panel h3{font-family:var(--serif);font-weight:900;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.05;margin:12px 0 14px;letter-spacing:-.02em}
+.panel p{color:#ecd9c0;font-size:1.05rem}
+.panel .btn{margin-top:22px}
+.journey-head{position:absolute;top:34px;left:0;right:0;text-align:center;z-index:5;color:var(--cream);pointer-events:none}
+.journey-head small{letter-spacing:.24em;text-transform:uppercase;font-size:.75rem;color:var(--caramel-2)}
+.progress{position:absolute;right:22px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;z-index:6}
+.progress i{width:9px;height:9px;border-radius:50%;background:rgba(255,246,232,.3);transition:.3s;display:block}
+.progress i.on{background:var(--caramel-2);transform:scale(1.5)}
+@media(max-width:640px){.panel .card{padding:28px 22px}.progress{right:10px}}
+
+/* ---------- SECTIONS ---------- */
+section.block{padding:110px 0;position:relative}
+.sec-head{max-width:640px;margin-bottom:54px}
+.sec-head small{color:var(--caramel);font-weight:600;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:clamp(2rem,4.5vw,3.3rem);line-height:1.05;letter-spacing:-.02em;margin:12px 0}
+.sec-head p{color:var(--muted);font-size:1.08rem}
+
+.reveal{opacity:0;transform:perspective(1000px) rotateX(18deg) translateY(50px);transform-origin:50% 100%;transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;perspective:1200px}
+.tilt{position:relative;border-radius:26px;padding:34px 30px 30px;color:var(--cream);min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;
+  transform-style:preserve-3d;transition:transform .15s ease-out,box-shadow .3s;box-shadow:0 30px 60px -30px rgba(42,23,16,.6)}
+.tilt .glare{position:absolute;inset:0;background:radial-gradient(500px circle at var(--gx,50%) var(--gy,0%),rgba(255,255,255,.28),transparent 45%);pointer-events:none}
+.tilt h3{font-family:var(--serif);font-size:1.9rem;font-weight:900;transform:translateZ(50px);line-height:1.05}
+.tilt p{transform:translateZ(30px);opacity:.92;margin-top:8px}
+.tilt .emoji{position:absolute;top:22px;right:24px;font-size:4.2rem;transform:translateZ(80px);filter:drop-shadow(0 14px 12px rgba(0,0,0,.35))}
+.center{text-align:center;margin-top:44px}
+@media(max-width:900px){.menu-grid{grid-template-columns:1fr}.tilt{min-height:260px}}
+
+.proof{background:var(--cream-2)}
+.proof-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}
+.score{background:var(--cocoa);color:var(--cream);border-radius:30px;padding:44px 34px;text-align:center;transform:rotate(-2deg);box-shadow:0 30px 60px -30px rgba(42,23,16,.7)}
+.score .big{font-family:var(--serif);font-size:5.5rem;font-weight:900;line-height:1;color:var(--caramel-2)}
+.stars{color:var(--caramel-2);letter-spacing:4px;font-size:1.3rem;margin:6px 0}
+.score small{opacity:.8}
+.quotes{display:grid;gap:18px}
+.q{background:#fff;border-radius:22px;padding:24px 26px;box-shadow:0 14px 30px -20px rgba(42,23,16,.5)}
+.q p{font-family:var(--serif);font-size:1.2rem;line-height:1.35}
+.q span{display:block;margin-top:10px;font-size:.85rem;color:var(--muted)}
+.note{font-size:.8rem;color:var(--muted);margin-top:16px}
+@media(max-width:900px){.proof-grid{grid-template-columns:1fr}.score{transform:none}}
+
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.way{background:#fff;border-radius:24px;padding:32px 28px;border:1px solid rgba(42,23,16,.08);transition:transform .3s,box-shadow .3s}
+.way:hover{transform:translateY(-8px);box-shadow:0 26px 40px -26px rgba(42,23,16,.5)}
+.way .ic{width:54px;height:54px;border-radius:16px;background:var(--cream-2);display:grid;place-items:center;font-size:1.6rem;margin-bottom:16px}
+.way h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:6px}
+.way p{color:var(--muted);margin-bottom:16px}
+.way a{font-weight:600;color:var(--caramel);border-bottom:2px solid currentColor}
+@media(max-width:900px){.ways{grid-template-columns:1fr}}
+
+.visit{background:var(--cocoa);color:var(--cream);overflow:hidden}
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.visit h2{font-family:var(--serif);font-weight:900;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.02;letter-spacing:-.02em}
+.visit h2 em{color:var(--caramel-2)}
+.info{margin-top:26px;display:grid;gap:14px;color:#ecd9c0}
+.info div{display:flex;gap:14px}
+.info b{color:var(--cream);min-width:84px}
+.visit .cta-row .btn-ghost{border-color:var(--cream);color:var(--cream)}
+.visit .cta-row .btn-ghost:hover{background:var(--cream);color:var(--cocoa)}
+.pin-wrap{perspective:900px}
+.pin-card{background:linear-gradient(160deg,var(--cream),var(--cream-2));color:var(--cocoa);border-radius:30px;padding:40px 34px;transform:rotateY(-14deg) rotateX(6deg);transition:transform .5s;box-shadow:-30px 40px 60px -30px rgba(0,0,0,.6)}
+.pin-card:hover{transform:rotateY(0) rotateX(0)}
+.pin-card h3{font-family:var(--serif);font-size:1.7rem;margin-bottom:6px}
+.pin-card .code{display:inline-block;background:var(--cocoa);color:var(--cream);border-radius:10px;padding:6px 12px;font-weight:600;margin:10px 0 16px;font-size:.9rem}
+@media(max-width:900px){.visit-grid{grid-template-columns:1fr}.pin-card{transform:none}}
+
+footer{background:#1d0f09;color:#bfa593;padding:34px 0 100px;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* ---------- MOBILE ACTION BAR ---------- */
+.dock{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;gap:10px;background:rgba(42,23,16,.94);backdrop-filter:blur(10px);padding:10px;border-radius:999px;box-shadow:0 18px 40px -10px rgba(0,0,0,.6)}
+.dock a{flex:1;text-align:center;padding:13px 8px;border-radius:999px;font-weight:600;font-size:.95rem;color:var(--cream)}
+.dock a.main{background:var(--caramel)}
+@media(max-width:820px){.dock{display:flex}}
+
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .band-track,.scroll-cue::after{animation:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- PHOTO STYLES ---------- */
+.photo3d{position:relative;width:min(380px,78%);aspect-ratio:4/5;transform-style:preserve-3d;
+  transform:rotateY(calc(-14deg + var(--mx,0deg) + var(--sc,0deg))) rotateX(calc(4deg + var(--my,0deg)));will-change:transform}
+.photo3d img{width:100%;height:100%;object-fit:cover;border-radius:34px;display:block;background:linear-gradient(160deg,#f2b25c,#b06a26);
+  box-shadow:-30px 40px 70px -25px rgba(42,23,16,.65),0 0 0 8px #fff}
+.chip{position:absolute;background:#fff;color:var(--cocoa);border-radius:999px;padding:10px 16px;font-size:.85rem;font-weight:600;white-space:nowrap;box-shadow:0 16px 30px -14px rgba(42,23,16,.55)}
+.chip b{color:var(--caramel)}
+.c1{top:6%;left:-14%;transform:translateZ(90px)}
+.c2{bottom:14%;right:-16%;transform:translateZ(120px)}
+.c3{bottom:-3%;left:-6%;transform:translateZ(60px)}
+@media(max-width:900px){.photo3d{width:min(300px,70%)}.c1{left:-8%}.c2{right:-8%}}
+.tilt{background:linear-gradient(to top,rgba(30,14,8,.88) 8%,rgba(30,14,8,.15) 62%),var(--img) center/cover no-repeat,#8a4416}
+.pimg{height:150px;border-radius:18px;margin-bottom:20px;background-size:cover;background-position:center;box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+footer .credit{width:100%;font-size:.78rem;opacity:.7}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="logo"><i></i>Ambrosial</a>
+    <div class="nav-links">
+      <a href="#journey">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </div>
+    <a class="btn btn-primary btn-sm" href="https://glovoapp.com" target="_blank" rel="noopener">Order now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><b>★ 4.7</b> on Google · Lekki, Lagos</span>
+      <h1>Fluffy pancakes. <em>Fresh</em> pastries. One cosy stop.</h1>
+      <p class="lead">Ambrosial Cafe &amp; Bakery on Admiralty Way is where Lekki comes to slow down. Dine in, grab something to go, or have it delivered to your door.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://glovoapp.com" target="_blank" rel="noopener">Order delivery</a>
+        <a class="btn btn-ghost" href="#visit">Reserve a visit</a>
+      </div>
+      <div class="mini-trust">
+        <span><i class="dot"></i>Open until 10 pm</span>
+        <span>Dine-in</span>
+        <span>Takeaway</span>
+        <span>Delivery</span>
+      </div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="photo3d" id="stack">
+        <img src="https://images.unsplash.com/flagged/photo-1557609786-fd36193db6e5?auto=format&fit=crop&w=1100&q=75" alt="Fluffy pancakes topped with raspberries and blueberries" fetchpriority="high">
+        <div class="chip c1"><b>★ 4.7</b> Google rating</div>
+        <div class="chip c2">🥞 Pancakes guests rave about</div>
+        <div class="chip c3">Open until 10 pm</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</header>
+
+<div class="band" aria-hidden="true">
+  <div class="band-track">
+    <span>Heavenly pancakes</span><span>Pastries baked fresh</span><span>Dine-in · Takeaway · Delivery</span><span>Admiralty Way, Lekki</span>
+    <span>Heavenly pancakes</span><span>Pastries baked fresh</span><span>Dine-in · Takeaway · Delivery</span><span>Admiralty Way, Lekki</span>
+  </div>
+</div>
+
+<!-- 3D SCROLL JOURNEY -->
+<section class="journey" id="journey">
+  <div class="journey-sticky" id="jsticky">
+    <div class="journey-head"><small>Keep scrolling</small></div>
+    <div class="progress" id="jprog"></div>
+    <div class="world" id="world">
+      <div class="panel" data-i="0"><div class="card">
+        <div class="pimg" style="background-image:url(https://images.unsplash.com/photo-1762032313029-7d799c618eae?auto=format&fit=crop&w=700&q=75)"></div>
+        <div class="num">01 · The bakery</div>
+        <h3>Baked with care, displayed to tempt you.</h3>
+        <p>A counter of pastries that guests say look as good as they taste. Pick a few for the table, or box them up for later.</p>
+        <a class="btn btn-primary" href="#menu">See the menu</a>
+      </div></div>
+      <div class="panel" data-i="1"><div class="card">
+        <div class="pimg" style="background-image:url(https://images.unsplash.com/flagged/photo-1557609786-fd36193db6e5?auto=format&fit=crop&w=700&q=75)"></div>
+        <div class="num">02 · The pancakes</div>
+        <h3>Fluffy, golden, and gone too fast.</h3>
+        <p>Our pancakes are the thing people write home about. Stacked high, served warm, built for sharing (or not).</p>
+        <a class="btn btn-primary" href="https://glovoapp.com" target="_blank" rel="noopener">Order pancakes</a>
+      </div></div>
+      <div class="panel" data-i="2"><div class="card">
+        <div class="pimg" style="background-image:url(https://images.unsplash.com/photo-1717768023941-78186ff7a5d7?auto=format&fit=crop&w=700&q=75)"></div>
+        <div class="num">03 · Your way</div>
+        <h3>Sit in, take away, or stay home.</h3>
+        <p>Linger with friends at the café, collect on your way through Lekki, or let delivery bring the bakery to you.</p>
+        <a class="btn btn-primary" href="https://glovoapp.com" target="_blank" rel="noopener">Order delivery</a>
+      </div></div>
+      <div class="panel" data-i="3"><div class="card">
+        <div class="pimg" style="background-image:url(https://images.unsplash.com/flagged/photo-1557609786-fd36193db6e5?auto=format&fit=crop&w=700&q=75)"></div>
+        <div class="num">04 · Come hungry</div>
+        <h3>Your table is waiting on Admiralty Way.</h3>
+        <p>Open until 10 pm. Call ahead for groups or special occasions, or just walk in.</p>
+        <a class="btn btn-primary" href="tel:+2348167435864">Call 0816 743 5864</a>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="block" id="menu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <small>From the kitchen</small>
+      <h2>What to order first.</h2>
+      <p>A taste of what Ambrosial is known for. The full, current menu lives on our website and on Glovo.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="tilt reveal" style="--img:url(https://images.unsplash.com/flagged/photo-1557609786-fd36193db6e5?auto=format&fit=crop&w=900&q=75)"><div class="glare"></div><h3>Pancakes</h3><p>Light, fluffy stacks that guests rank among the best they've had.</p></article>
+      <article class="tilt reveal d1" style="--img:url(https://images.unsplash.com/photo-1762032313029-7d799c618eae?auto=format&fit=crop&w=900&q=75)"><div class="glare"></div><h3>Pastries</h3><p>A generous selection from the bakery counter, ready for the table or the road.</p></article>
+      <article class="tilt reveal d2" style="--img:url(https://images.unsplash.com/photo-1717768023941-78186ff7a5d7?auto=format&fit=crop&w=900&q=75)"><div class="glare"></div><h3>Café favourites</h3><p>Something warm to sip while you stay a little longer.</p></article>
+    </div>
+    <div class="center reveal">
+      <a class="btn btn-primary" href="https://ambrosialcafe.com" target="_blank" rel="noopener">View full menu</a>
+      <a class="btn btn-ghost" href="https://glovoapp.com" target="_blank" rel="noopener" style="margin-left:8px">Order on Glovo</a>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="block proof" id="reviews">
+  <div class="wrap proof-grid">
+    <div class="score reveal">
+      <div class="big">4.7</div>
+      <div class="stars">★★★★★</div>
+      <small>Google rating · 3 reviews</small>
+    </div>
+    <div>
+      <div class="sec-head reveal" style="margin-bottom:26px">
+        <small>Loved in Lekki</small>
+        <h2>Guests keep coming back for the pancakes.</h2>
+      </div>
+      <div class="quotes">
+        <div class="q reveal d1"><p>Heavenly pancakes, fluffy and delicious, plus a pastry selection that looks as good as it tastes.</p><span>Divine Madu · Google Local Guide (paraphrased review)</span></div>
+        <div class="q reveal d2"><p>Warm, attentive service that rounds out a lovely visit.</p><span>Google reviewer (paraphrased: food 4/5, service 5/5)</span></div>
+      </div>
+      <p class="note reveal">Summaries of public Google reviews. Replace with word-for-word quotes (with permission) as more reviews come in.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WAYS -->
+<section class="block" id="ways">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <small>However you like it</small>
+      <h2>Three easy ways to enjoy Ambrosial.</h2>
+    </div>
+    <div class="ways">
+      <div class="way reveal"><div class="ic">🍽️</div><h3>Dine in</h3><p>Settle into the café on Admiralty Way and take your time.</p><a href="#visit">Get directions</a></div>
+      <div class="way reveal d1"><div class="ic">🛍️</div><h3>Takeaway</h3><p>Call ahead and pick up pastries or a full order on the go.</p><a href="tel:+2348167435864">Call to order</a></div>
+      <div class="way reveal d2"><div class="ic">🛵</div><h3>Delivery</h3><p>Order through Glovo and have it brought to your door.</p><a href="https://glovoapp.com" target="_blank" rel="noopener">Order on Glovo</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="block visit" id="visit">
+  <div class="wrap visit-grid">
+    <div class="reveal">
+      <h2>Come hungry. <em>Leave happy.</em></h2>
+      <div class="info">
+        <div><b>Address</b><span>Plot 31A Admiralty Way, Eti-Osa, Lekki 105102, Lagos</span></div>
+        <div><b>Hours</b><span>Open until 10 pm</span></div>
+        <div><b>Phone</b><span><a href="tel:+2348167435864">0816 743 5864</a></span></div>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Ambrosial+Cafe+%26+Bakery+Plot+31A+Admiralty+Way+Lekki+Lagos" target="_blank" rel="noopener">Get directions</a>
+        <a class="btn btn-ghost" href="tel:+2348167435864">Call us</a>
+      </div>
+    </div>
+    <div class="pin-wrap reveal d1">
+      <div class="pin-card">
+        <h3>Find us in Lekki Phase 1</h3>
+        <div class="code">Plus code · CFXG+6P Lekki</div>
+        <p>Right on Admiralty Way, easy to reach whether you're coming from Victoria Island, Ikoyi or the Lekki axis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> Ambrosial Cafe &amp; Bakery · Lekki, Lagos</span>
+    <span>Plot 31A Admiralty Way, Eti-Osa · 0816 743 5864</span>
+    <span class="credit">Photos: Fa Barboza, Anastasiya Badun and Ebru Doğan on Unsplash. Stand-in images; swap for Ambrosial's own food photos.</span>
+  </div>
+</footer>
+
+<div class="dock">
+  <a class="main" href="https://glovoapp.com" target="_blank" rel="noopener">Order</a>
+  <a href="tel:+2348167435864">Call</a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Ambrosial+Cafe+%26+Bakery+Plot+31A+Admiralty+Way+Lekki+Lagos" target="_blank" rel="noopener">Directions</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var clamp=function(v,a,b){return Math.max(a,Math.min(b,v))};
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var stack = document.getElementById("stack");
+  /* ---- Mouse tilt on hero ---- */
+  var mx=0,my=0,tmx=0,tmy=0;
+  window.addEventListener('mousemove',function(e){
+    tmx = (e.clientX/innerWidth - .5)*24;
+    tmy = (e.clientY/innerHeight - .5)*-14;
+  },{passive:true});
+
+  /* ---- Journey setup ---- */
+  var journey = document.getElementById('journey');
+  var panels = [].slice.call(document.querySelectorAll('.panel'));
+  var world = document.getElementById('world');
+  var prog = document.getElementById('jprog');
+  var N = panels.length, DEPTH = 760;
+  panels.forEach(function(){ prog.appendChild(document.createElement('i')); });
+  var dots = [].slice.call(prog.children);
+  var RINGS = 9, rings=[];
+  for (var r=0;r<RINGS;r++){
+    var el=document.createElement('div'); el.className='ring';
+    var s = 520 + (r%3)*220; el.style.width=s+'px'; el.style.height=s+'px';
+    el.style.marginLeft=(-s/2)+'px'; el.style.marginTop=(-s/2)+'px';
+    world.insertBefore(el, world.firstChild); rings.push(el);
+  }
+  var floats = [].slice.call(document.querySelectorAll('.float'));
+
+  var spinBase = 0;
+  function frame(){
+    var sy = window.scrollY, vh = window.innerHeight;
+
+    /* nav */
+    document.getElementById('nav').classList.toggle('solid', sy > 40);
+
+    /* hero: spin with scroll + ease mouse */
+    mx += (tmx-mx)*.06; my += (tmy-my)*.06;
+    spinBase += reduce ? 0 : .12;
+    var spin = spinBase + sy*.18;
+    stack.style.setProperty('--sc', clamp(sy*.05,0,28)+'deg');
+    stack.style.setProperty('--mx', mx+'deg');
+    stack.style.setProperty('--my', my+'deg');
+    floats.forEach(function(f){
+      var dp = +f.dataset.depth;
+      f.style.transform = 'translate3d('+(mx*dp/10)+'px,'+(-sy*dp/260 + my*dp/10)+'px,0)';
+    });
+
+    /* journey progress */
+    var rect = journey.getBoundingClientRect();
+    var total = journey.offsetHeight - vh;
+    var p = clamp(-rect.top/total, 0, 1);
+    var cam = p*(N-1)*DEPTH;
+    var cur = Math.round(p*(N-1));
+    dots.forEach(function(d,i){ d.classList.toggle('on', i===cur); });
+
+    panels.forEach(function(el,i){
+      var pz = cam - i*DEPTH;                 // 0 = in focus, >0 passed us, <0 ahead
+      var x = (i%2 ? 1 : -1) * Math.min(1, innerWidth/1100) * 150;
+      var fade;
+      if (pz > 0) fade = 1 - pz/(DEPTH*.55); else fade = 1 + pz/(DEPTH*.8);
+      fade = clamp(fade,0,1);
+      var xo = x * (pz>0 ? 1+pz/DEPTH : 1) * (1 - Math.min(1,Math.abs(pz)/DEPTH)*.0);
+      if (innerWidth < 700) xo = 0;
+      var ry = (i%2 ? -1 : 1) * clamp(-pz/DEPTH,0,1.2)*22 + (pz>0 ? (i%2?1:-1)*pz/DEPTH*30 : 0);
+      el.style.opacity = fade;
+      el.style.transform = 'translate3d('+xo+'px,-50%,'+pz+'px) rotateY('+ry+'deg)';
+      el.style.visibility = fade < .01 ? 'hidden' : 'visible';
+      el.classList.toggle('active', Math.abs(pz) < DEPTH*.35);
+    });
+    var RANGE = 3200;
+    rings.forEach(function(el,k){
+      var zz = ((cam*1.4 + k*(RANGE/RINGS)) % RANGE) - (RANGE - 500);
+      var o = clamp(1 - Math.abs(zz+800)/1800, 0, .8);
+      el.style.opacity = o;
+      el.style.transform = 'translateZ('+zz+'px)';
+    });
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  /* ---- Reveal on scroll ---- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* ---- Card tilt ---- */
+  document.querySelectorAll('.tilt').forEach(function(card){
+    card.addEventListener('mousemove',function(e){
+      var b = card.getBoundingClientRect();
+      var px = (e.clientX-b.left)/b.width, py = (e.clientY-b.top)/b.height;
+      card.style.transform = 'rotateY('+((px-.5)*16)+'deg) rotateX('+((.5-py)*16)+'deg) translateZ(10px)';
+      card.style.setProperty('--gx',(px*100)+'%'); card.style.setProperty('--gy',(py*100)+'%');
+    });
+    card.addEventListener('mouseleave',function(){ card.style.transform=''; });
+  });
+})();
+</script>
+</body>
+</html>
